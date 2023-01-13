@@ -9,8 +9,7 @@
     "lint": "next lint",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
-    "e2e": "start-server-and-test start http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+    "playwright": "playwright test"
   },
   "dependencies": {
     "@next/font": "13.1.2",
@@ -19,8 +18,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.29.2",
     "cypress": "^12.3.0",
-    "prettier": "2.8.2",
-    "start-server-and-test": "^1.15.2"
+    "prettier": "2.8.2"
   }
 }
