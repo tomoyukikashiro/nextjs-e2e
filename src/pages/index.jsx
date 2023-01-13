@@ -10,6 +10,9 @@ export default function Home() {
 
     if (!id || !pass) return;
 
+    /**
+     * production : {name: "Leanne Graham"}
+     */
     fetch("https://jsonplaceholder.typicode.com/users/1")
       .then((response) => response.json())
       .then((json) => setUser(json));
@@ -23,6 +26,7 @@ export default function Home() {
             <label className={styles.label}>
               <div>ID</div>
               <input
+                name="id"
                 className={styles.input}
                 type="text"
                 value={id}
@@ -32,6 +36,7 @@ export default function Home() {
             <label className={styles.label}>
               <div>Password</div>
               <input
+                name="pass"
                 className={styles.input}
                 type="password"
                 value={pass}
